@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://mobilis-stretch.com",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/",
