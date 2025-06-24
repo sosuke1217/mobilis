@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "http://mobilis-stretch.com",
+      "source": "/",
       "destination": "https://mobilis-stretch.com",
       "permanent": true
     }
