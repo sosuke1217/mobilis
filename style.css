@@ -159,21 +159,17 @@ h1, h2, h3 {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: space-between;
-  align-items: stretch; /* 追加 */
+  align-items: stretch; /* これで縦方向の高さを揃える */
 }
 
 .faq-item {
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border-bottom: 1px solid #ccc;
   flex: 0 0 48%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  display: flex;           /* フレックスコンテナに */
+  flex-direction: column;  /* 中のコンテンツを縦積みに */
+  justify-content: flex-start;
 }
+
 
 .faq-question span.text-primary {
   display: inline-block;
