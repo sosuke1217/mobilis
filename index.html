@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="広尾エリアの出張ストレッチサービス。深部筋にアプローチし、柔軟性・パフォーマンスを高めます。英語対応可。">
-  <meta name="keywords" content="ストレッチ, 広尾, 出張, 英語対応, Mobilis, 柔軟性, パフォーマンス">
+  <meta name="description" content="" id="meta-description">
+  <meta name="keywords" content="" id="meta-keywords">
   <meta property="og:title" content="Mobilis | 広尾のストレッチサービス">
-  <meta property="og:description" content="深部筋・習慣化・パフォーマンス向上に特化。出張＆レンタルスペースOK。">
-  <meta property="og:image" content="https://mobilis-stretch.com/logo.png">
+  <meta name="keywords" content="" id="meta-keywords">
+  <meta property="og:image" content="https://mobilis-stretch.com/logo-light.PNG" />
   <meta property="og:url" content="https://mobilis-stretch.com/">
+  
+  <meta name="robots" content="index, follow" />
   <meta name="twitter:card" content="summary_large_image">
   <title>Mobilis | ストレッチサービス</title>
-
+  
   <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="alternate" hreflang="ja" href="https://mobilis-stretch.com/index.html?lang=ja" />
+  <link rel="alternate" hreflang="en" href="https://mobilis-stretch.com/index.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://mobilis-stretch.com/" />
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -565,6 +570,18 @@
   </script>
 
   <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    const keywordsTag = document.getElementById("meta-keywords");
+  
+    if (userLang.startsWith("ja")) {
+      keywordsTag.setAttribute("content", "ストレッチ, 広尾, 出張, 英語対応, Mobilis, 柔軟性, パフォーマンス");
+    } else {
+      keywordsTag.setAttribute("content", "stretch, Hiroo, in-home, English available, Mobilis, flexibility, performance");
+    }
+  </script>
+
+
+  <script>
     window.addEventListener("DOMContentLoaded", function () {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get("success") === "true") {
@@ -583,16 +600,27 @@
   </script>
 
   <script>
-    // 自動でブラウザ言語に応じて切り替え
     document.addEventListener("DOMContentLoaded", function () {
       const userLang = navigator.language || navigator.userLanguage;
+      const keywordsTag = document.getElementById("meta-keywords");
+      const metaDesc = document.getElementById("meta-description");
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+  
       if (userLang.startsWith("ja")) {
         switchLang("ja");
+        keywordsTag?.setAttribute("content", "ストレッチ, 広尾, 出張, 英語対応, Mobilis, 柔軟性, パフォーマンス");
+        metaDesc?.setAttribute("content", "広尾エリアの出張ストレッチサービス。深部筋にアプローチし、柔軟性・パフォーマンスを高めます。英語対応可。");
+        ogTitle?.setAttribute("content", "Mobilis | 広尾のストレッチサービス");
+        ogDesc?.setAttribute("content", "深部筋・習慣化・パフォーマンス向上に特化。出張＆レンタルスペースOK。");
       } else {
         switchLang("en");
+        keywordsTag?.setAttribute("content", "stretch, Hiroo, in-home, English available, Mobilis, flexibility, performance");
+        metaDesc?.setAttribute("content", "In-home stretch service in Hiroo, Tokyo. Improve flexibility and performance through deep muscle release. English-friendly.");
+        ogTitle?.setAttribute("content", "Mobilis | Stretch Service in Hiroo");
+        ogDesc?.setAttribute("content", "Focused on deep muscle release, habit formation, and performance improvement. In-home or rental space options available.");
       }
     });
   </script>
-
 </body>
 </html>
