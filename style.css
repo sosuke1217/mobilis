@@ -149,60 +149,64 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-/* FAQセクション全体 */
 #faq-ja, #faq-en {
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Q番号スタイル */
+.faq-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.faq-item {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #ccc;
+  flex: 0 0 48%;
+  box-sizing: border-box;
+}
+
 .faq-question span.text-primary {
   display: inline-block;
   background-color: #0879A6;
-  color: #fff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-weight: bold;
-  margin-right: 10px;
+  color: white;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  font-weight: 700;
   font-size: 1rem;
   vertical-align: middle;
+  margin-right: 0.6rem;
+  text-align: center;
+  line-height: 1.4;
 }
 
-/* 質問テキスト */
 .faq-question {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #02496b;
+  color: #064a6d;
+  margin-bottom: 0.6rem;
 }
 
-/* 回答テキスト */
 .faq-answer {
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 1.8rem;
   font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* 行間調整とマージン */
-.faq-item {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
-}
-
-/* 2カラムグリッド調整 */
-@media (min-width: 768px) {
+/* モバイル対応 */
+@media (max-width: 767px) {
   .faq-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
   }
   .faq-item {
-    flex: 0 0 48%;
+    flex: 1 1 100%;
+    margin-bottom: 1.5rem;
   }
 }
 
