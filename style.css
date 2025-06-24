@@ -148,3 +148,70 @@ h1, h2, h3 {
 [data-aos].aos-animate {
   opacity: 1;
 }
+
+/* FAQセクション全体 */
+#faq-ja, #faq-en {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Q番号スタイル */
+.faq-question span.text-primary {
+  display: inline-block;
+  background-color: #0879A6;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+/* 質問テキスト */
+.faq-question {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #02496b;
+}
+
+/* 回答テキスト */
+.faq-answer {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+/* 行間調整とマージン */
+.faq-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+/* 2カラムグリッド調整 */
+@media (min-width: 768px) {
+  .faq-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .faq-item {
+    flex: 0 0 48%;
+  }
+}
+
+/* セクションタイトル */
+#faq-ja > .container > h2,
+#faq-en > .container > h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0879A6;
+  text-align: center;
+}
