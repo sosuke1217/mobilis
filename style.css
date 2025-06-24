@@ -158,6 +158,7 @@ h1, h2, h3 {
 /* Q番号スタイル */
 .faq-question span.text-primary {
   display: inline-block;
+  background-color: #0879A6;
   color: #fff;
   border-radius: 50%;
   width: 30px;
