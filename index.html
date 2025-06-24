@@ -582,5 +582,17 @@
     });
   </script>
 
+  <script>
+    // 自動でブラウザ言語に応じて切り替え
+    document.addEventListener("DOMContentLoaded", function () {
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith("ja")) {
+        switchLang("ja");
+      } else {
+        switchLang("en");
+      }
+    });
+  </script>
+
 </body>
 </html>
