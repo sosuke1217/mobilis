@@ -477,7 +477,7 @@
           <div id="form-success" class="alert alert-success d-none mt-4" role="alert">
             送信ありがとうございました！24時間以内にご連絡差し上げます。24時間以内に返信が無ければ再度フォームからお申し込みお願い致します。
           </div>
-          <form action="https://formspree.io/f/xeokzzdg" method="POST">
+          <form action="https://formspree.io/f/xeokzzdg" method="POST" onsubmit="return validateForm()">
             <div class="mb-3">
               <input type="text" name="name" class="form-control" placeholder="お名前" required>
             </div>
@@ -487,6 +487,14 @@
             <div class="mb-3">
               <textarea name="message" class="form-control" rows="5" placeholder="ご相談内容やご希望日時など（例：5月10日 14:00〜、5月12日 10:00〜15:00 など複数候補をお知らせください）" required></textarea>
             </div>
+          
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="termsCheck">
+              <label class="form-check-label" for="termsCheck">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">利用規約・プライバシーポリシー</a>を読み、同意しました
+              </label>
+            </div>
+          
             <input type="text" name="_gotcha" style="display: none;">
             <button type="submit" class="btn btn-primary">送信</button>
           </form>
@@ -820,6 +828,16 @@
     "url": "https://mobilis-stretch.com/",
     "logo": "https://mobilis-stretch.com/logo-light.png"
   }
+  </script>
+  <script>
+    function validateForm() {
+      const checkBox = document.getElementById('termsCheck');
+      if (!checkBox.checked) {
+        alert('送信するには利用規約・プライバシーポリシーへの同意が必要です。');
+        return false; // 送信停止
+      }
+      return true; // 送信続行
+    }
   </script>
 </body>
 </html>
