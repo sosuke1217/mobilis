@@ -525,7 +525,7 @@
           <div id="form-success" class="alert alert-success d-none mt-4" role="alert">
             Thank you! I’ll get back to you within 24 hours. If you don't get a reply within 24 hours, please resubmit the form again.
           </div>
-          <form action="https://formspree.io/f/xeokzzdg" method="POST">
+          <form action="https://formspree.io/f/xeokzzdg" method="POST" id="contactFormEn">
             <div class="mb-3">
               <input type="text" name="name" class="form-control" placeholder="Your Name" required>
             </div>
@@ -535,6 +535,14 @@
             <div class="mb-3">
               <textarea name="message" class="form-control" rows="5" placeholder="Message / Preferred time and location" required></textarea>
             </div>
+          
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="agreeCheckboxEn" required>
+              <label class="form-check-label" for="agreeCheckboxEn">
+                I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#commercialModal">Legal Notice (Japan)</a>
+              </label>
+            </div>
+          
             <input type="text" name="_gotcha" style="display: none;">
             <button type="submit" class="btn btn-primary">Send</button>
           </form>
