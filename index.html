@@ -477,7 +477,7 @@
           <div id="form-success" class="alert alert-success d-none mt-4" role="alert">
             送信ありがとうございました！24時間以内にご連絡差し上げます。24時間以内に返信が無ければ再度フォームからお申し込みお願い致します。
           </div>
-          <form action="https://formspree.io/f/xeokzzdg" method="POST" onsubmit="return validateForm()">
+          <form action="https://formspree.io/f/xeokzzdg" method="POST" onsubmit="return checkAgreement()">
             <div class="mb-3">
               <input type="text" name="name" class="form-control" placeholder="お名前" required>
             </div>
@@ -485,17 +485,18 @@
               <input type="email" name="_replyto" class="form-control" placeholder="メールアドレス" required>
             </div>
             <div class="mb-3">
-              <textarea name="message" class="form-control" rows="5" placeholder="ご相談内容やご希望日時など（例：5月10日 14:00〜、5月12日 10:00〜15:00 など複数候補をお知らせください）" required></textarea>
+              <textarea name="message" class="form-control" rows="5" placeholder="ご相談内容やご希望日時など" required></textarea>
             </div>
           
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="agreeCheckbox" required>
-              <label class="form-check-label" for="agreeCheckbox">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#commercialModal">特定商取引法に基づく表記を確認しました</a>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+              <label class="form-check-label" for="agreeTerms">
+                利用規約を確認し、同意しました。
               </label>
             </div>
           
             <input type="text" name="_gotcha" style="display: none;">
+          
             <button type="submit" class="btn btn-primary">送信</button>
           </form>
         </div>
@@ -750,6 +751,101 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">Mobilis 利用規約 / Terms of Service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる / Close"></button>
+      </div>
+      <div class="modal-body" style="white-space: pre-wrap; max-height: 70vh; overflow-y: auto;">
+        <section id="terms" class="my-5">
+          <h2>Mobilis 利用規約（日本語）</h2>
+          <p>Mobilis（以下「当サービス」といいます。）は、パーソナルストレッチサービスを提供し、ご利用にあたって以下の規約を定めます。ご利用の際は本規約をよくお読みいただき、ご同意のうえご予約ください。</p>
+        
+          <h3>第1条（適用）</h3>
+          <p>本規約は、Mobilisのサービス利用に関わる一切の関係に適用されます。</p>
+        
+          <h3>第2条（予約およびキャンセル）</h3>
+          <ol>
+            <li>ご予約は完全予約制です。LINE・WhatsApp・お問い合わせフォームにて承ります。</li>
+            <li>キャンセルは24時間前までにご連絡ください。24時間以内のキャンセルは1回分消化扱いとなります。</li>
+            <li>その他のキャンセル・変更はご相談のうえ対応いたします。</li>
+          </ol>
+        
+          <h3>第3条（料金および支払い）</h3>
+          <ol>
+            <li>料金は料金ページに記載の通りです。</li>
+            <li>お支払いは現金、クレジットカード（Square決済）、PayPayに対応しております。</li>
+          </ol>
+        
+          <h3>第4条（サービス提供場所）</h3>
+          <p>出張型のサービスのため、ご自宅やレンタルスペース等ご希望の場所へ伺います。場所により出張費を頂戴する場合があります。</p>
+        
+          <h3>第5条（禁止事項）</h3>
+          <ul>
+            <li>法令違反や公序良俗に反する行為</li>
+            <li>他のお客様やスタッフへの迷惑行為</li>
+            <li>サービスの妨害や無断録音・撮影など</li>
+            <li>その他、スタッフが不適切と判断する行為</li>
+          </ul>
+        
+          <h3>第6条（免責事項）</h3>
+          <p>当サービスは治療・医療行為を目的としておりません。身体の不調や病気がある場合は医療機関への受診をお願いいたします。サービス利用による事故・怪我について当サービスは一切責任を負いかねます。</p>
+        
+          <h3>第7条（個人情報の取り扱い）</h3>
+          <p>お預かりした個人情報は予約管理・サービス向上のために利用し、適切に管理いたします。</p>
+        
+          <h3>第8条（利用規約の変更）</h3>
+          <p>本規約は予告なく変更することがあります。変更後の規約はウェブサイトにて告知します。</p>
+        
+          <hr>
+          
+          <h2>Mobilis Terms of Service (English)</h2>
+            <p>Mobilis (hereinafter referred to as "the Service") provides personal stretch services. Please read and agree to the following terms before making a booking.</p>
+          
+            <h3>Article 1 (Application)</h3>
+            <p>These terms apply to all relationships concerning the use of the Mobilis service.</p>
+          
+            <h3>Article 2 (Reservations and Cancellations)</h3>
+            <ol>
+              <li>Reservations are by appointment only via LINE, WhatsApp, or the inquiry form.</li>
+              <li>Please notify cancellations at least 24 hours in advance. Cancellations within 24 hours before the appointment will be counted as one session used.</li>
+              <li>Other cancellations or changes will be handled upon consultation.</li>
+            </ol>
+          
+            <h3>Article 3 (Fees and Payment)</h3>
+            <ol>
+              <li>Fees are as listed on the pricing page.</li>
+              <li>Payments can be made by cash, credit card (Square), or PayPay.</li>
+            </ol>
+          
+            <h3>Article 4 (Service Locations)</h3>
+            <p>The service is primarily in-home or at rental spaces of your choice. Travel fees may apply depending on the location.</p>
+          
+            <h3>Article 5 (Prohibited Conduct)</h3>
+            <ul>
+              <li>Violations of laws or public order and morals</li>
+              <li>Acts disturbing other customers or staff</li>
+              <li>Obstruction of service, unauthorized recording or photography</li>
+              <li>Other acts deemed inappropriate by staff</li>
+            </ul>
+          
+            <h3>Article 6 (Disclaimer)</h3>
+            <p>The service is not medical treatment. Please consult a medical professional if you have health concerns. Mobilis is not liable for any injuries or accidents resulting from the use of the service.</p>
+          
+            <h3>Article 7 (Handling of Personal Information)</h3>
+            <p>Personal information collected will be used for managing reservations and improving services and will be appropriately protected.</p>
+          
+            <h3>Article 8 (Changes to Terms)</h3>
+            <p>These terms may be updated without prior notice. Changes will be announced on the website.</p>
+          </section>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる / Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="py-4 bg-white">
   <div class="container text-center small text-muted">
@@ -838,14 +934,14 @@
   }
   </script>
   <script>
-    function validateForm() {
-      const checkBox = document.getElementById('termsCheck');
-      if (!checkBox.checked) {
-        alert('送信するには利用規約・プライバシーポリシーへの同意が必要です。');
-        return false; // 送信停止
-      }
-      return true; // 送信続行
+  function checkAgreement() {
+    const checkbox = document.getElementById('agreeTerms');
+    if (!checkbox.checked) {
+      alert('利用規約に同意いただく必要があります。');
+      return false;
     }
+    return true;
+  }
   </script>
 </body>
 </html>
