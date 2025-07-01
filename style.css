@@ -65,14 +65,18 @@ h1, h2, h3 {
   text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
-  .navbar {
-    background-color: #E4E9F2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border-bottom: 1px solid #eaeaea;
-  }
+.navbar {
+  background-color: #E4E9F2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 .nav-link {
-  color: #141826;
+  color: var(--main-blue);
+  padding: 0.5rem 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
   margin: 0 0.75rem;
@@ -80,7 +84,14 @@ h1, h2, h3 {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #0879A6;
+  color: var(--accent-pink);
+}
+
+.navbar .btn-cta-nav {
+  background: var(--accent-pink);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .navbar-brand {
