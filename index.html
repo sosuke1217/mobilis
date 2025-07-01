@@ -488,15 +488,14 @@
               <textarea name="message" class="form-control" rows="5" placeholder="ご相談内容やご希望日時など" required></textarea>
             </div>
           
-            <div class="form-check mb-3">
-              <input type="checkbox" class="form-check-input" id="agreeTerms" required>
-              <label class="form-check-label" for="agreeTerms">
-                利用規約を確認し、同意しました。
-              </label>
-            </div>
-          
+           <div class="form-check mb-3">
+             <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+             <label class="form-check-label" for="agreeTerms">
+             利用規約を確認し、同意しました。
+             </label>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="ms-2">利用規約を読む</a>
+           </div>
             <input type="text" name="_gotcha" style="display: none;">
-          
             <button type="submit" class="btn btn-primary">送信</button>
           </form>
         </div>
@@ -540,10 +539,9 @@
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="agreeCheckboxEn" required>
               <label class="form-check-label" for="agreeCheckboxEn">
-                I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#commercialModal">Legal Notice (Japan)</a>
+                I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a>.
               </label>
             </div>
-          
             <input type="text" name="_gotcha" style="display: none;">
             <button type="submit" class="btn btn-primary">Send</button>
           </form>
