@@ -1,3 +1,11 @@
+:root {
+  --main-blue: #548DBF;
+  --hover-blue: #6CA1C5;
+  --accent-pink: #E74091;
+  --bg-light: #CBD2CF;
+  --bg-warm: #D4BC84;
+}
+
 body {
   font-family: 'Noto Sans JP', "Helvetica Neue", sans-serif;
   background-color: #E4E9F2;
@@ -7,6 +15,27 @@ body {
 h1, h2, h3 {
   color: #141826;
 }
+
+.section-title {
+  color: #5e8fb3;
+  border-bottom: 3px solid #c7cdcb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.btn-cta {
+  padding: 0.55rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 260px;
+  width: 100%;
+  justify-content: center;
+}
+
 
 .btn-lg {
   border-radius: 30px;
@@ -217,6 +246,13 @@ h1, h2, h3 {
   }
 }
 
+@media (min-width: 576px) {
+  .btn-cta {
+    width: auto;
+  }
+}
+
+
 /* セクションタイトル */
 #faq-ja > .container > h2,
 #faq-en > .container > h2 {
@@ -226,3 +262,21 @@ h1, h2, h3 {
   color: #0879A6;
   text-align: center;
 }
+
+footer {
+  display: block !important; /* 念のため強制的に表示 */
+}
+
+.card {
+  background-color: #f9fafa; /* 明るめグレージュ系 */
+  border: 1px solid #c7cdcb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background-color: #d5c188;
+  color: #fff;
+  font-weight: 600;
+}
+
