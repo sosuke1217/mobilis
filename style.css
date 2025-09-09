@@ -293,26 +293,30 @@ footer {
   font-weight: 600;
 }
 
-/* お客様の声セクション */
+/* お客様の声セクション - カルーセル */
 #testimonials {
   background-color: #f8f9fa;
 }
 
-#testimonials .card {
+#testimonials .carousel {
+  padding: 2rem 0;
+}
+
+#testimonials .carousel-inner {
+  padding: 1rem 0;
+}
+
+#testimonials .testimonial-card {
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   background-color: white;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-#testimonials .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-#testimonials .card-body {
-  padding: 1.5rem;
+#testimonials .testimonial-card .card-body {
+  padding: 2rem;
 }
 
 #testimonials .text-primary {
@@ -320,36 +324,124 @@ footer {
 }
 
 #testimonials .fa-star {
-  font-size: 0.9rem;
-  margin-right: 2px;
+  font-size: 1rem;
+  margin-right: 3px;
 }
 
 #testimonials h6 {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 #testimonials .card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   color: #555;
   font-style: italic;
+  margin-bottom: 1.5rem;
 }
 
 #testimonials small {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #6c757d;
   font-weight: 500;
 }
 
+/* カルーセルインジケーター */
+#testimonials .carousel-indicators {
+  bottom: -3rem;
+  margin-bottom: 0;
+}
+
+#testimonials .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0879A6;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+#testimonials .carousel-indicators button.active {
+  opacity: 1;
+}
+
+/* カルーセルコントロール */
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(8, 121, 166, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+#testimonials .carousel-control-prev:hover,
+#testimonials .carousel-control-next:hover {
+  opacity: 1;
+}
+
+#testimonials .carousel-control-prev {
+  left: -25px;
+}
+
+#testimonials .carousel-control-next {
+  right: -25px;
+}
+
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-  #testimonials .card-body {
+  #testimonials .testimonial-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  #testimonials .card-text {
+    font-size: 0.95rem;
+  }
+  
+  #testimonials .carousel-control-prev,
+  #testimonials .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #testimonials .carousel-control-prev {
+    left: -20px;
+  }
+  
+  #testimonials .carousel-control-next {
+    right: -20px;
+  }
+  
+  #testimonials .carousel-control-prev-icon,
+  #testimonials .carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  #testimonials .testimonial-card .card-body {
     padding: 1.25rem;
   }
   
   #testimonials .card-text {
     font-size: 0.9rem;
+  }
+  
+  #testimonials .carousel-control-prev,
+  #testimonials .carousel-control-next {
+    display: none;
   }
 }
 
