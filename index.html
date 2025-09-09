@@ -101,61 +101,87 @@
   position: relative;">
   
   <!-- オーバーレイ -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);">
-  </div>
+  <div class="hero-overlay"></div>
 
   <!-- コンテンツ -->
-  <div class="container position-relative text-center">
-      <!-- 日本語 -->
-    <div class="lang-ja">
-      <h1 class="display-5 fw-bold" data-aos="fade-down">
-        あなたの身体は、<span class="mobile-br"><br></span>これまでのあなたを物語っています。
-      </h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="200">
-        一緒に、身体を変えていきましょう。
-      </p>
-      <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
-        <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="LINEで予約">
-          <i class="fa-brands fa-line"></i> LINEで予約
-        </a>
-        <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="WhatsAppで相談">
-          <i class="fa-brands fa-whatsapp"></i> WhatsAppで相談
-        </a>
-      </div>      
-    </div>
-    <!-- 英語 -->
-    <div class="lang-en d-none">
-      <h1 class="display-5 fw-bold" data-aos="fade-down">
-        Your body tells a story.
-      </h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="200">
-        I can help you rewrite it.
-      </p>
-      <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
-        <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="Book on LINE"
-           onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Book on LINE' });">
-           <i class="fa-brands fa-line me-2"></i> Book on LINE
-        </a>
-        <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="Consult on WhatsApp"
-           onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'Consult on WhatsApp' });">
-           <i class="fa-brands fa-whatsapp me-2"></i> Consult on WhatsApp
-        </a>
+  <div class="container position-relative">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-8 mx-auto text-center">
+        <!-- 日本語 -->
+        <div class="lang-ja">
+          <div class="hero-badge mb-4" data-aos="fade-down" data-aos-delay="100">
+            <span class="badge bg-primary bg-opacity-20 text-white px-3 py-2 rounded-pill">
+              <i class="fa-solid fa-map-marker-alt me-2"></i>広尾エリア出張対応
+            </span>
+          </div>
+          <h1 class="display-4 fw-bold mb-4" data-aos="fade-down" data-aos-delay="200">
+            あなたの身体は、<span class="mobile-br"><br></span>これまでのあなたを物語っています。
+          </h1>
+          <p class="lead fs-4 mb-5" data-aos="fade-up" data-aos-delay="300">
+            一緒に、身体を変えていきましょう。
+          </p>
+          <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで予約">
+                <i class="fa-brands fa-line me-2"></i> LINEで予約
+              </a>
+              <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="WhatsAppで相談">
+                <i class="fa-brands fa-whatsapp me-2"></i> WhatsAppで相談
+              </a>
+            </div>
+            <p class="text-white-50 small">
+              <i class="fa-solid fa-clock me-1"></i> 24時間受付中
+            </p>
+          </div>      
+        </div>
+        <!-- 英語 -->
+        <div class="lang-en d-none">
+          <div class="hero-badge mb-4" data-aos="fade-down" data-aos-delay="100">
+            <span class="badge bg-primary bg-opacity-20 text-white px-3 py-2 rounded-pill">
+              <i class="fa-solid fa-map-marker-alt me-2"></i>Hiroo Area Service
+            </span>
+          </div>
+          <h1 class="display-4 fw-bold mb-4" data-aos="fade-down" data-aos-delay="200">
+            Your body tells a story.
+          </h1>
+          <p class="lead fs-4 mb-5" data-aos="fade-up" data-aos-delay="300">
+            I can help you rewrite it.
+          </p>
+          <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="Book on LINE"
+                 onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Book on LINE' });">
+                 <i class="fa-brands fa-line me-2"></i> Book on LINE
+              </a>
+              <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="Consult on WhatsApp"
+                 onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'Consult on WhatsApp' });">
+                 <i class="fa-brands fa-whatsapp me-2"></i> Consult on WhatsApp
+              </a>
+            </div>
+            <p class="text-white-50 small">
+              <i class="fa-solid fa-clock me-1"></i> Available 24/7
+            </p>
+          </div>
+        </div>
+        
+        <!-- 言語切替 -->
+        <div class="hero-lang-switch mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="btn-group" role="group">
+            <button class="btn btn-outline-light btn-sm" onclick="switchLang('ja')">
+              <i class="fa-solid fa-globe me-1"></i>日本語
+            </button>
+            <button class="btn btn-outline-light btn-sm" onclick="switchLang('en')">
+              <i class="fa-solid fa-globe me-1"></i>English
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <!-- 言語切替 -->
-    <div class="mt-5">
-      <button class="btn btn-outline-light me-2" onclick="switchLang('ja')">日本語</button>
-      <button class="btn btn-outline-light" onclick="switchLang('en')">English</button>
     </div>
   </div>
 </section>
 
 <!-- Mobilis紹介セクション -->
-<section id="about" class="py-5 bg-white">
+<section id="about" class="py-5 py-lg-6 bg-white">
   <div class="container text-center">
     <div class="lang-ja mb-5">
       <h2 class="fw-bold mb-3">Mobilisについて</h2>
@@ -239,7 +265,7 @@
   </div>
 </section>
 
-<section id="pricing" class="py-5 bg-light">
+<section id="pricing" class="py-5 py-lg-6 bg-light">
   <div class="container text-center">
     <!-- 日本語 -->
     <h2 class="mb-5 fw-bold lang-ja">料金</h2>
@@ -421,7 +447,7 @@
 </section>
 
 <!-- お客様の声セクション -->
-<section id="testimonials" class="py-5 bg-light">
+<section id="testimonials" class="py-5 py-lg-6 bg-white">
   <div class="container">
     <!-- 日本語 -->
     <div class="lang-ja text-center">
@@ -740,7 +766,7 @@
 </section>
 
 <!-- FAQセクション（日本語） -->
-<section id="faq-ja" class="py-5 lang-ja">
+<section id="faq-ja" class="py-5 py-lg-6 lang-ja bg-light">
   <div class="container">
     <h2>よくある質問</h2>
     <div class="faq-row">
@@ -783,7 +809,7 @@
 </section>
 
 <!-- FAQセクション（英語） -->
-<section id="faq-en" class="py-5 lang-en d-none">
+<section id="faq-en" class="py-5 py-lg-6 lang-en d-none bg-light">
   <div class="container">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-row">
@@ -823,7 +849,7 @@
   </div>
 </section>
 
-<section id="contact" class="py-5 bg-light">
+<section id="contact" class="py-5 py-lg-6 bg-white">
   <div class="container">
     <!-- 日本語 -->
     <div class="lang-ja text-center">
