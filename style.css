@@ -293,3 +293,63 @@ footer {
   font-weight: 600;
 }
 
+/* お客様の声セクション */
+#testimonials {
+  background-color: #f8f9fa;
+}
+
+#testimonials .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+#testimonials .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#testimonials .card-body {
+  padding: 1.5rem;
+}
+
+#testimonials .text-primary {
+  color: #0879A6 !important;
+}
+
+#testimonials .fa-star {
+  font-size: 0.9rem;
+  margin-right: 2px;
+}
+
+#testimonials h6 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+#testimonials .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+#testimonials small {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  #testimonials .card-body {
+    padding: 1.25rem;
+  }
+  
+  #testimonials .card-text {
+    font-size: 0.9rem;
+  }
+}
+
