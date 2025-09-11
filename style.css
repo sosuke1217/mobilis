@@ -660,13 +660,25 @@ section.bg-white + section.bg-light {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 3px;
   background: linear-gradient(90deg, #0879A6, #18C5D9);
   border-radius: 2px;
 }
 
+/* プロフィールタイトルのアンダーラインを左寄せに */
+.profile-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0879A6, #18C5D9);
+  border-radius: 2px;
+}
 
 /* カードの統一感向上 */
 .card {
@@ -692,6 +704,11 @@ section.bg-white + section.bg-light {
   }
   
   .container h2::after {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .profile-title::after {
     width: 40px;
     height: 2px;
   }
