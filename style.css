@@ -644,8 +644,20 @@ section.bg-white {
   background-color: #ffffff !important;
 }
 
+/* すべてのグレーのラインを強制的に削除 */
+section {
+  border-top: none !important;
+  border-bottom: none !important;
+}
 
-/* コンテンツの視覚的階層改善 */
+section.bg-light,
+section.bg-white {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+
+/* コンテンツの視覚的階層改善 - Updated */
 .container h2,
 .section-title {
   position: relative;
