@@ -644,11 +644,6 @@ section.bg-white {
   background-color: #ffffff !important;
 }
 
-/* セクション間の視覚的分離 */
-section.bg-light + section.bg-white,
-section.bg-white + section.bg-light {
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
 
 /* コンテンツの視覚的階層改善 */
 .container h2,
@@ -657,13 +652,23 @@ section.bg-white + section.bg-light {
   margin-bottom: 3rem;
 }
 
-.container h2::after,
-.section-title::after {
+.container h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0879A6, #18C5D9);
+  border-radius: 2px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
   width: 60px;
   height: 3px;
   background: linear-gradient(90deg, #0879A6, #18C5D9);
