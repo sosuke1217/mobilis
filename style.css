@@ -337,6 +337,132 @@ footer {
   background-color: #ffffff;
 }
 
+/* 施術者プロフィールセクション */
+#profile {
+  background-color: #f8f9fa;
+}
+
+.profile-image-container {
+  position: relative;
+}
+
+.profile-placeholder {
+  background-color: #f8f9fa;
+  border: 3px dashed #0879A6;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.profile-placeholder:hover {
+  border-color: #18C5D9;
+  background-color: #f0f8ff;
+}
+
+.profile-content h2 {
+  color: #141826;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-content h4 {
+  color: #0879A6;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.profile-item {
+  margin-bottom: 1.5rem;
+}
+
+.profile-item h6 {
+  color: #0879A6;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.profile-item ul li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.profile-description {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.profile-description h6 {
+  color: #0879A6;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.profile-description p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.feature-item {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.feature-item h6 {
+  color: #141826;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .profile-content h2 {
+    font-size: 2rem;
+  }
+  
+  .profile-content h4 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profile-description {
+    padding: 1.25rem;
+  }
+  
+  .feature-item {
+    padding: 0.75rem;
+  }
+}
+
 #testimonials .carousel {
   padding: 2rem 0;
 }
