@@ -644,22 +644,14 @@ section.bg-white {
   background-color: #ffffff !important;
 }
 
-/* すべてのグレーのラインを強制的に削除 */
-section {
-  border-top: none !important;
-  border-bottom: none !important;
+/* セクション間の視覚的分離 */
+section.bg-light + section.bg-white,
+section.bg-white + section.bg-light {
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-section.bg-light,
-section.bg-white {
-  border-top: none !important;
-  border-bottom: none !important;
-}
-
-
-/* コンテンツの視覚的階層改善 - Updated */
-.container h2,
-.section-title {
+/* コンテンツの視覚的階層改善 */
+.container h2 {
   position: relative;
   margin-bottom: 3rem;
 }
@@ -676,7 +668,8 @@ section.bg-white {
   border-radius: 2px;
 }
 
-.section-title::after {
+/* プロフィールタイトルのアンダーラインを左寄せに */
+.profile-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -705,14 +698,17 @@ section.bg-white {
     padding-bottom: 2rem !important;
   }
   
-  .container h2,
-  .section-title {
+  .container h2 {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
   
-  .container h2::after,
-  .section-title::after {
+  .container h2::after {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .profile-title::after {
     width: 40px;
     height: 2px;
   }
