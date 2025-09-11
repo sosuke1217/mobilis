@@ -651,12 +651,14 @@ section.bg-white + section.bg-light {
 }
 
 /* コンテンツの視覚的階層改善 */
-.container h2 {
+.container h2,
+.section-title {
   position: relative;
   margin-bottom: 3rem;
 }
 
-.container h2::after {
+.container h2::after,
+.section-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -686,12 +688,14 @@ section.bg-white + section.bg-light {
     padding-bottom: 2rem !important;
   }
   
-  .container h2 {
+  .container h2,
+  .section-title {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
   
-  .container h2::after {
+  .container h2::after,
+  .section-title::after {
     width: 40px;
     height: 2px;
   }
