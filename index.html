@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" id="meta-description">
-  <meta name="keywords" content="" id="meta-keywords">
-  <meta property="og:title" content="Mobilis | ストレッチサービス">
-  <meta name="keywords" content="" id="meta-keywords">
+  <meta property="og:title" content="Mobilis | 出張ストレッチサービス【東京・広尾・六本木】">
   <meta property="og:image" content="https://mobilis-stretch.com/logo-light.png" />
   <meta property="og:url" content="https://mobilis-stretch.com/">
+  <meta property="og:description" content="広尾・六本木・港区の出張ストレッチ。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回60分¥7,500。">
   
   <meta name="robots" content="index, follow" />
   <meta name="twitter:card" content="summary_large_image">
-  <title>Mobilis | 出張ストレッチサービス</title>
-  
+  <title>Mobilis | 出張ストレッチサービス【東京・広尾・六本木】</title>
+  <meta name="description" content="広尾・六本木・港区の出張ストレッチならMobilis。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回60分¥7,500。">
+  <meta property="og:site_name" content="Mobilis">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:title" content="Mobilis | 出張ストレッチサービス【東京・広尾・六本木】">
+  <meta name="twitter:description" content="広尾・六本木・港区の出張ストレッチ。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回60分¥7,500。">
+  <meta name="twitter:image" content="https://mobilis-stretch.com/logo-light.png">
+
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="canonical" href="https://mobilis-stretch.com/" />
-  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="image" href="IMG_4351.JPG">
+
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- オリジナルCSS -->
@@ -38,28 +48,6 @@
   
     gtag('config', 'G-M68HR1NDHW');
   </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Mobilis",
-      "description": "Mobilisは広尾・南麻布エリアを中心に展開する出張ストレッチサービスです。英語対応可、柔軟性とパフォーマンス向上に特化しています。",
-      "url": "https://mobilis-stretch.com/",
-      "image": "https://mobilis-stretch.com/logo-light.png",
-      "email": "mobilis.stretch@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "港区広尾",
-        "addressRegion": "東京都",
-        "postalCode": "106-0047",
-        "addressCountry": "JP"
-      },
-      "areaServed": "Minato-ku, Tokyo",
-      "priceRange": "¥8,000〜¥156,000",
-      "availableLanguage": ["Japanese", "English"],
-      "serviceType": "In-home Stretching / Personal Stretch Sessions"
-    }
-  </script>
 </head>
 <body>
 
@@ -67,7 +55,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo-light.png" alt="Mobilis ロゴ" class="img-fluid" style="max-height: 80px;">
+        <img src="logo-light.png" alt="Mobilis ロゴ" class="img-fluid"
+        width="240" height="80" style="max-height: 80px;" loading="lazy" decoding="async">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilisNavbar" aria-controls="mobilisNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -119,10 +108,12 @@
       </p>
           <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
-              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで予約">
+              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで予約"
+                 onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'LINE予約(JP)' });">
                 <i class="fa-brands fa-line me-2"></i> LINEで予約
               </a>
-              <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="WhatsAppで相談">
+              <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="WhatsAppで相談"
+                 onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'WhatsApp相談(JP)' });">
                 <i class="fa-brands fa-whatsapp me-2"></i> WhatsAppで相談
               </a>
             </div>
@@ -265,7 +256,8 @@
       <div class="row align-items-center">
         <div class="col-lg-4 text-center mb-4 mb-lg-0">
           <div class="profile-image-container" data-aos="fade-right" data-aos-delay="100">
-            <img src="profile.JPEG" alt="吉田壮祐 - ストレッチトレーナー" class="profile-photo">
+            <img src="profile.JPEG" alt="吉田壮祐 - ストレッチトレーナー"
+            class="profile-photo" width="600" height="600" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="col-lg-8">
@@ -325,7 +317,8 @@
       <div class="row align-items-center">
         <div class="col-lg-4 text-center mb-4 mb-lg-0">
           <div class="profile-image-container" data-aos="fade-right" data-aos-delay="100">
-            <img src="profile.JPEG" alt="Sosuke Yoshida - Stretch Trainer" class="profile-photo">
+            <img src="profile.JPEG" alt="Sosuke Yoshida - Stretch Trainer"
+              class="profile-photo" width="600" height="600" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="col-lg-8">
@@ -1090,10 +1083,12 @@
         ご希望の日時・場所・内容をお知らせいただけるとスムーズです。
       </p>
       <div class="d-flex justify-content-center gap-3 mt-4 mb-3 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
-        <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="LINEで予約">
+        <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="LINEで予約"
+           onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'LINE予約(JP/Contact)' });">
           <i class="fa-brands fa-line"></i> LINEで予約
         </a>
-        <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="WhatsAppで相談">
+        <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="WhatsAppで相談"
+           onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'WhatsApp相談(JP/Contact)' });">
           <i class="fa-brands fa-whatsapp"></i> WhatsAppで相談
         </a>
       </div>
@@ -1148,7 +1143,7 @@
       
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
         <div class="col-md-8 col-lg-6">
-          <div id="form-success" class="alert alert-success d-none mt-4" role="alert">
+          <div id="form-success-en" class="alert alert-success d-none mt-4" role="alert">
             Thank you! I’ll get back to you within 24 hours. If you don't get a reply within 24 hours, please resubmit the form again.
           </div>
           <form action="https://formspree.io/f/xeokzzdg" method="POST" id="contactFormEn">
@@ -1208,7 +1203,7 @@
           <p>
             当サービスでは、Google社が提供するアクセス解析ツール「Google Analytics」を利用しています。<br>
             Cookie を用いて匿名のトラフィックデータを収集します。<br>
-            詳しくは <a href="https://policies.google.com/privacy?hl=ja" target="_blank">Google社のプライバシーポリシー</a> をご参照ください。
+            詳しくは <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google社のプライバシーポリシー</a> をご参照ください。
           </p>
 
           <h6 class="mt-4 fw-bold">4. 第三者提供</h6>
@@ -1246,7 +1241,7 @@
           <p>
             We use Google Analytics, a web analytics tool provided by Google LLC, to improve service quality.<br>
             It uses cookies to collect anonymous traffic data and does not identify individuals.<br>
-            See Google's privacy policy <a href="https://policies.google.com/privacy?hl=en" target="_blank">here</a>.
+            See Google's privacy policy <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">here</a>.
           </p>
 
           <h6 class="mt-4 fw-bold">4. Third-Party Disclosure</h6>
@@ -1494,31 +1489,27 @@
     function switchLang(lang) {
       document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('d-none', lang !== 'ja'));
       document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('d-none', lang !== 'en'));
+      localStorage.setItem('mobilis_lang', lang);
     }
+    window.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get("lang");
+      const saved = localStorage.getItem('mobilis_lang');
+      const lang = urlLang || saved || 'ja';
+      switchLang(lang);
+    });
   </script>
-
-  <script>
-    const userLang = navigator.language || navigator.userLanguage;
-    const keywordsTag = document.getElementById("meta-keywords");
-  
-    if (userLang.startsWith("ja")) {
-      keywordsTag.setAttribute("content", "ストレッチ, 広尾, 出張, 英語対応, Mobilis, 柔軟性, パフォーマンス");
-    } else {
-      keywordsTag.setAttribute("content", "stretch, Hiroo, in-home, English available, Mobilis, flexibility, performance");
-    }
-  </script>
-
-
   <script>
     window.addEventListener("DOMContentLoaded", function () {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get("success") === "true") {
-        document.getElementById("form-success").classList.remove("d-none");
+        document.querySelectorAll("#form-success, #form-success-en").forEach(el => {
+          if (el) el.classList.remove("d-none");
+        });
       }
     });
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
       once: true, // 一度だけアニメーションする（再スクロールで繰り返さない）
@@ -1526,39 +1517,107 @@
       offset: 100 // 開始のタイミング（スクロール位置）
     });
   </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const userLang = navigator.language || navigator.userLanguage;
-      const keywordsTag = document.getElementById("meta-keywords");
-      const metaDesc = document.getElementById("meta-description");
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-  
-      if (userLang.startsWith("ja")) {
-        switchLang("ja");
-        keywordsTag?.setAttribute("content", "ストレッチ, 広尾, 出張, 英語対応, Mobilis, 柔軟性, パフォーマンス");
-        metaDesc?.setAttribute("content", "広尾エリアを中心に出張ストレッチサービスを提供。深部筋やインナーマッスルにしっかりアプローチし、柔軟性・可動域・パフォーマンス向上をサポート。習慣化までフォローし、身体の変化を実感できます。英語対応可能で、忙しい方や初心者も安心してご利用いただけます。");
-        ogTitle?.setAttribute("content", "Mobilis | 出張ストレッチサービス");
-        ogDesc?.setAttribute("content", "深部筋・習慣化・パフォーマンス向上に特化。出張＆レンタルスペースOK。");
-      } else {
-        switchLang("en");
-        keywordsTag?.setAttribute("content", "stretch, Hiroo, in-home, English available, Mobilis, flexibility, performance");
-        metaDesc?.setAttribute("content", "In-home stretch service in Hiroo, Tokyo. Improve flexibility and performance through deep muscle release. English-friendly.");
-        ogTitle?.setAttribute("content", "Mobilis | Stretch Service");
-        ogDesc?.setAttribute("content", "Focused on deep muscle release, habit formation, and performance improvement. In-home or rental space options available.");
-      }
-    });
-  </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://mobilis-stretch.com/#business",
+    "name": "Mobilis",
     "url": "https://mobilis-stretch.com/",
-    "logo": "https://mobilis-stretch.com/logo-light.png"
+    "image": "https://mobilis-stretch.com/logo-light.png",
+    "logo": "https://mobilis-stretch.com/logo-light.png",
+    "description": "広尾・六本木・港区の出張ストレッチ。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回60分¥7,500。",
+    "telephone": "+81-80-9692-1177",
+    "address": {
+      "@type":"PostalAddress",
+      "addressRegion":"東京都",
+      "addressLocality":"港区広尾",
+      "postalCode":"106-0047",
+      "addressCountry":"JP"
+    },
+    "areaServed": [
+      {"@type":"AdministrativeArea","name":"港区 広尾"},
+      {"@type":"AdministrativeArea","name":"港区 六本木"},
+      {"@type":"AdministrativeArea","name":"渋谷区 恵比寿"}
+    ],
+    "priceRange": "¥8,000–¥156,000",
+    "availableLanguage": ["Japanese","English"],
+    "sameAs": [
+      "https://www.instagram.com/mobilis_stretch/",
+      "https://maps.google.com/?cid=12566927490025245152"
+    ],
+    "hasMap": "https://maps.google.com/?cid=12566927490025245152",
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": [
+        "https://lin.ee/c9cW6QW",
+        "https://wa.me/818096921177"
+      ],
+      "result": {
+        "@type": "Reservation",
+        "name": "Mobilis Stretch Session"
+      }
+    }
   }
   </script>
+
+ <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"普通のストレッチとどう違うの？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Mobilisは深部筋へのアプローチと習慣化を重視したパーソナルストレッチサービスです。場合によっては運動要素を取り入れ、柔軟性だけでなく、動きやすさやパフォーマンス向上もサポートします。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"どんな服装が良いですか？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"こちらで準備は致しませんので、動きやすくリラックスできる服装（ジャージ・ヨガウェア等）をご用意ください。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"効果はいつ出ますか？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"個人差はありますが、多くの方が初回から可動域や姿勢の変化を感じられます。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"予約は必要ですか？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"完全予約制です。LINEまたはウェブフォームからご予約ください。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"ベッドは持参してくれるの？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"はい、施術用のポータブルベッド（幅70cm・長さ185cm）を持参します。ベッドの設置に約2m×1mのスペースが必要です。床での施術をご希望の場合は、その旨お知らせください。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"自宅にスペースがない場合はどうすればいいですか？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"スペースの確保が難しい場合は、レンタルスペースやスタジオでの施術も可能です。お客様ご自身で手配していただくか、ご希望エリアを伺ったうえでこちらからもご提案可能です。※レンタル費用は実費ご負担となります。"
+      }
+    }
+  ]
+}
+</script>
+
   <script>
   function checkAgreement() {
     const checkbox = document.getElementById('agreeTerms');
