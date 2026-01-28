@@ -36,6 +36,11 @@
   <!-- オリジナルCSS -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- AOSアニメーション用CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -50,12 +55,14 @@
     gtag('config', 'G-M68HR1NDHW');
   </script>
 </head>
-<body>
+<body id="top">
+  <!-- スキップリンク（アクセシビリティ） -->
+  <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ナビゲーションバー -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="#top" aria-label="トップページに戻る">
         <img src="logo-light.png" alt="Mobilis ロゴ" class="img-fluid"
         width="150" height="80" style="max-height: 80px;" fetchpriority="high" decoding="async">
       </a>
@@ -85,6 +92,7 @@
   </nav>
 
   <!-- Heroセクション -->
+  <main id="main-content">
   <section class="hero-section text-white d-flex align-items-center" style="
   background-image: url('IMG_4351.JPG');
   background-size: cover;
@@ -110,10 +118,12 @@
           <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
               <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで予約"
+                 target="_blank" rel="noopener noreferrer"
                  onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'LINE予約(JP)' });">
                 <i class="fa-brands fa-line me-2"></i> LINEで予約
               </a>
               <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="WhatsAppで相談"
+                 target="_blank" rel="noopener noreferrer"
                  onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'WhatsApp相談(JP)' });">
                 <i class="fa-brands fa-whatsapp me-2"></i> WhatsAppで相談
               </a>
@@ -134,10 +144,12 @@
           <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
               <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="Book on LINE"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Book on LINE' });">
            <i class="fa-brands fa-line me-2"></i> Book on LINE
         </a>
               <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="Consult on WhatsApp"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'Consult on WhatsApp' });">
            <i class="fa-brands fa-whatsapp me-2"></i> Consult on WhatsApp
         </a>
@@ -1085,10 +1097,12 @@
       </p>
       <div class="d-flex justify-content-center gap-3 mt-4 mb-3 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
         <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="LINEで予約"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'LINE予約(JP/Contact)' });">
           <i class="fa-brands fa-line"></i> LINEで予約
         </a>
         <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="WhatsAppで相談"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'WhatsApp相談(JP/Contact)' });">
           <i class="fa-brands fa-whatsapp"></i> WhatsAppで相談
         </a>
@@ -1133,10 +1147,12 @@
       </p>
       <div class="d-flex justify-content-center gap-3 mt-4 mb-3 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
         <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="Book on LINE"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Book on LINE' });">
            <i class="fa-brands fa-line me-2"></i> Book on LINE
         </a>
         <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta" aria-label="Consult on WhatsApp"
+           target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'Consult on WhatsApp' });">
            <i class="fa-brands fa-whatsapp me-2"></i> Consult on WhatsApp
         </a>
@@ -1464,6 +1480,31 @@
   </div>
 </div>
 
+<!-- SNSリンクセクション -->
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="text-center">
+      <div class="d-flex justify-content-center gap-4 align-items-center flex-wrap">
+        <a href="https://lin.ee/c9cW6QW" class="sns-icon-link" aria-label="LINEで予約"
+           target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event', 'line_click', { 'event_category': 'SNS', 'event_label': 'LINE(Footer)' });">
+          <i class="fa-brands fa-line fa-2x"></i>
+        </a>
+        <a href="https://wa.me/818096921177" class="sns-icon-link" aria-label="WhatsAppで相談"
+           target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event', 'whatsapp_click', { 'event_category': 'SNS', 'event_label': 'WhatsApp(Footer)' });">
+          <i class="fa-brands fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/mobilis.stretch/" class="sns-icon-link" aria-label="Instagramを見る"
+           target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event', 'instagram_click', { 'event_category': 'SNS', 'event_label': 'Instagram(Footer)' });">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer class="py-4 bg-white">
   <div class="container text-center small text-muted">
@@ -1540,7 +1581,7 @@
     "priceRange": "¥8,000–¥156,000",
     "availableLanguage": ["Japanese","English"],
     "sameAs": [
-      "https://www.instagram.com/mobilis_stretch/",
+      "https://www.instagram.com/mobilis.stretch/",
       "https://maps.google.com/?cid=12566927490025245152"
     ],
     "hasMap": "https://maps.google.com/?cid=12566927490025245152",

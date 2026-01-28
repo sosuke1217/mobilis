@@ -13,6 +13,38 @@ body {
   line-height: 1.6;
 }
 
+/* スキップリンク（アクセシビリティ） */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0879A6;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* フォーカス可能な要素のスタイル改善 */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #0879A6;
+  outline-offset: 2px;
+}
+
+/* スムーズスクロール */
+html {
+  scroll-behavior: smooth;
+}
+
 /* セクション間のスペーシング改善 */
 .py-lg-6 {
   padding-top: 4rem !important;
@@ -66,6 +98,18 @@ h1, h2, h3 {
 
 .btn-whatsapp {
   background-color: #25d366;
+  color: white;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  border: none;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  opacity: 0.9;
   color: white;
 }
 
@@ -317,6 +361,72 @@ h1, h2, h3 {
 
 footer {
   display: block !important; /* 念のため強制的に表示 */
+}
+
+/* SNSリンクセクション */
+.sns-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa;
+}
+
+.sns-icon-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sns-icon-link i {
+  transition: all 0.3s ease;
+}
+
+.sns-icon-link i.fa-line {
+  color: #0879A6;
+}
+
+.sns-icon-link:hover i.fa-line {
+  color: #18C5D9;
+}
+
+.sns-icon-link i.fa-whatsapp {
+  color: #25d366;
+}
+
+.sns-icon-link:hover i.fa-whatsapp {
+  color: #1ebe5d;
+}
+
+.sns-icon-link i.fa-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sns-icon-link:hover i.fa-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.8;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 576px) {
+  .sns-icon-link {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .sns-icon-link i {
+    font-size: 1.5rem !important;
+  }
 }
 
 .card {
