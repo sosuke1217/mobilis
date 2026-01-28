@@ -535,6 +535,12 @@ footer {
   transform: scaleX(1);
 }
 
+.profile-item-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .profile-item-icon {
   width: 48px;
   height: 48px;
@@ -543,8 +549,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
   box-shadow: 0 3px 12px rgba(8, 121, 166, 0.25);
+  flex-shrink: 0;
 }
 
 .profile-item-icon i {
@@ -677,10 +683,13 @@ footer {
     margin-bottom: 1rem;
   }
   
+  .profile-item-header {
+    gap: 0.75rem;
+  }
+  
   .profile-item-icon {
     width: 42px;
     height: 42px;
-    margin-bottom: 1rem;
   }
   
   .profile-item-icon i {
