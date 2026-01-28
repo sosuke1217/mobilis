@@ -596,6 +596,29 @@ footer {
   border: 1px solid rgba(8, 121, 166, 0.1);
   margin-bottom: 2rem;
   position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profile-description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0879A6, #18C5D9);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.profile-description:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(8, 121, 166, 0.15);
+}
+
+.profile-description:hover::before {
+  transform: scaleX(1);
 }
 
 .profile-description-header {
