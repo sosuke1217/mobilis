@@ -1,15 +1,15 @@
 :root {
-  --main-blue: #548DBF;
-  --hover-blue: #6CA1C5;
-  --accent-pink: #E74091;
-  --bg-light: #CBD2CF;
-  --bg-warm: #D4BC84;
+  --main-blue: #0879A6;
+  --hover-blue: #18C5D9;
+  --accent-brown: #A67665;
+  --text-dark: #141826;
+  --bg-light: #E4E9F2;
 }
 
 body {
   font-family: 'Noto Sans JP', "Helvetica Neue", sans-serif;
   background-color: #ffffff;
-  color: #212529;
+  color: #141826;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -60,7 +60,7 @@ html {
 }
 
 h1, h2, h3 {
-  color: #212529;
+  color: #141826;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -130,8 +130,8 @@ h1, h2, h3 {
 
 .navbar {
   background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  border-bottom: 1px solid rgba(8, 121, 166, 0.1);
+  box-shadow: 0 1px 3px rgba(20, 24, 38, 0.08);
+  border-bottom: 1px solid rgba(166, 118, 101, 0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -139,7 +139,7 @@ h1, h2, h3 {
 }
 
 .nav-link {
-  color: #495057;
+  color: #141826;
   padding: 0.5rem 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -315,12 +315,13 @@ h1, h2, h3 {
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #02496b;
+  color: #141826;
 }
 
 /* Q番号スタイル */
 .faq-question span.text-primary {
   display: inline-block;
+  background: linear-gradient(135deg, #0879A6 0%, #18C5D9 100%);
   color: #fff;
   border-radius: 50%;
   width: 30px;
@@ -335,7 +336,7 @@ h1, h2, h3 {
 
 /* 回答テキスト */
 .faq-answer {
-  color: #444;
+  color: #495057;
   line-height: 1.6;
   margin-bottom: 0;
   font-size: 1rem;
@@ -457,7 +458,7 @@ footer {
 
 /* 施術者プロフィールセクション */
 #profile {
-  background-color: #f8f9fa;
+  background-color: #E4E9F2;
   position: relative;
 }
 
@@ -938,7 +939,7 @@ section {
 }
 
 section.bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #E4E9F2 !important;
 }
 
 section.bg-white {
@@ -948,7 +949,7 @@ section.bg-white {
 /* セクション間の視覚的分離 */
 section.bg-light + section.bg-white,
 section.bg-white + section.bg-light {
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(166, 118, 101, 0.15);
 }
 
 /* コンテンツの視覚的階層改善 */
