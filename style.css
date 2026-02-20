@@ -321,8 +321,7 @@ h1, h2, h3 {
 /* Q番号スタイル */
 .faq-question span.text-primary {
   display: inline-block;
-  background: linear-gradient(135deg, #0879A6 0%, #18C5D9 100%);
-  color: #fff;
+  color: #0879A6;
   border-radius: 50%;
   width: 30px;
   height: 30px;
