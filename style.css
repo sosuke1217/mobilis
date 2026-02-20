@@ -1016,3 +1016,9 @@ section.bg-white + section.bg-light {
   }
 }
 
+/* モーダルヘッダーとフッターの背景色を統一 */
+.modal-header.bg-light,
+.modal-footer.bg-light {
+  background-color: #E4E9F2 !important;
+}
+
