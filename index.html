@@ -1601,6 +1601,7 @@
     function switchLang(lang) {
       document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('d-none', lang !== 'ja'));
       document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('d-none', lang !== 'en'));
+      document.documentElement.lang = lang;
       localStorage.setItem('mobilis_lang', lang);
     }
     window.addEventListener("DOMContentLoaded", function () {
@@ -1634,7 +1635,7 @@
     "url": "https://mobilis-stretch.com/",
     "image": "https://mobilis-stretch.com/logo-light.png",
     "logo": "https://mobilis-stretch.com/logo-light.png",
-    "description": "広尾・六本木・港区の出張ストレッチ。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回60分¥7,500。",
+    "description": "広尾・六本木・港区の出張ストレッチ。深部筋アプローチで柔軟性・姿勢・肩こり腰痛・パフォーマンスを改善。英語対応／自宅・レンタルスペース可。初回評価セッション¥13,000。",
     "telephone": "+81-80-9692-1177",
     "address": {
       "@type":"PostalAddress",
@@ -1648,7 +1649,7 @@
       {"@type":"AdministrativeArea","name":"港区 六本木"},
       {"@type":"AdministrativeArea","name":"渋谷区 恵比寿"}
     ],
-    "priceRange": "¥8,000–¥156,000",
+    "priceRange": "¥5,000–¥144,000",
     "availableLanguage": ["Japanese","English"],
     "sameAs": [
       "https://www.instagram.com/mobilis.stretch/",
