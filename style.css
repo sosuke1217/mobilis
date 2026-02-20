@@ -8,9 +8,10 @@
 
 body {
   font-family: 'Noto Sans JP', "Helvetica Neue", sans-serif;
-  background-color: #E4E9F2;
-  color: #141826;
-  line-height: 1.6;
+  background-color: #ffffff;
+  color: #212529;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 /* スキップリンク（アクセシビリティ） */
@@ -59,14 +60,18 @@ html {
 }
 
 h1, h2, h3 {
-  color: #141826;
+  color: #212529;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .section-title {
-  color: #5e8fb3;
-  border-bottom: 3px solid #c7cdcb;
+  color: #0879A6;
+  border-bottom: 2px solid rgba(8, 121, 166, 0.2);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 
@@ -124,25 +129,27 @@ h1, h2, h3 {
 }
 
 .navbar {
-  background-color: #E4E9F2;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border-bottom: 1px solid #eaeaea;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(8, 121, 166, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .nav-link {
-  color: var(--main-blue);
+  color: #495057;
   padding: 0.5rem 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
   margin: 0 0.75rem;
+  letter-spacing: -0.01em;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--accent-pink);
+  color: #0879A6;
 }
 
 .navbar .btn-cta-nav {
@@ -431,10 +438,11 @@ footer {
 }
 
 .card {
-  background-color: #f9fafa; /* 明るめグレージュ系 */
-  border: 1px solid #c7cdcb;
+  background-color: #ffffff;
+  border: 1px solid rgba(8, 121, 166, 0.1);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
 }
 
 .card-header {
@@ -450,7 +458,7 @@ footer {
 
 /* 施術者プロフィールセクション */
 #profile {
-  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  background-color: #f8f9fa;
   position: relative;
 }
 
