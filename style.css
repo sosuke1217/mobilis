@@ -1195,3 +1195,93 @@ section.bg-white + section.bg-light {
   .profile-story { grid-template-columns: 1fr; gap: 1rem; }
   .profile-image-caption { font-size: .62rem; }
 }
+
+/* Compact portrait balance */
+#profile .profile-image-container,
+#profile .profile-photo {
+  min-height: 500px;
+  max-height: 560px;
+}
+
+/* Pricing: simple decision-first layout */
+#pricing {
+  background: #f2f5f3 !important;
+  padding-top: clamp(5rem, 8vw, 7rem) !important;
+  padding-bottom: clamp(5rem, 8vw, 7rem) !important;
+}
+
+#pricing > .container { max-width: 1120px; }
+#pricing > .container > h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+
+.pricing-intro { max-width: 760px; margin: 0 auto 4rem !important; }
+.pricing-intro > div { padding: 0 !important; }
+.pricing-intro h3 { font-size: .75rem !important; color: var(--main-blue); letter-spacing: .16em !important; text-transform: uppercase; }
+.pricing-intro p { font-size: 1.08rem !important; line-height: 2 !important; }
+
+.pricing-inperson {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem !important;
+}
+.pricing-inperson > h3 { grid-column: 1 / -1; margin: 0 0 .75rem !important; text-align: left !important; color: var(--deep-blue) !important; }
+.pricing-inperson > .row { margin: 0 !important; }
+.pricing-inperson > .row:last-child { grid-column: 1 / -1; }
+.pricing-inperson > .row > [class*="col-"] { padding: 0; height: 100%; }
+
+#pricing .card {
+  height: 100%;
+  border: 1px solid rgba(23,102,122,.15) !important;
+  border-radius: 3px !important;
+  background: rgba(255,255,255,.82) !important;
+  box-shadow: none !important;
+  text-align: left;
+  overflow: hidden;
+}
+#pricing .card:hover { transform: translateY(-2px); border-color: rgba(23,102,122,.35) !important; }
+#pricing .card-body { padding: 2rem !important; }
+#pricing .card h5 { margin-bottom: 1.25rem !important; color: var(--deep-blue) !important; font-size: 1.1rem !important; }
+#pricing .card .h2 { color: var(--deep-blue) !important; font-family: Georgia, serif; font-size: clamp(2rem, 3vw, 2.65rem); font-weight: 400 !important; }
+#pricing .card .h2 small { font-family: 'Noto Sans JP', sans-serif; font-size: .68rem !important; }
+#pricing .card-body > div[style*="border-bottom"] { border-color: rgba(23,102,122,.12) !important; }
+
+.pricing-inperson > .row:first-of-type .card::before {
+  content: "FIRST SESSION";
+  display: block;
+  padding: .6rem 2rem;
+  background: var(--deep-blue);
+  color: white;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.pricing-inperson > .row:last-child .card-body { padding: 2rem !important; }
+.pricing-inperson > .row:last-child .card-body > p:first-of-type { margin-bottom: 1.5rem !important; }
+.pricing-inperson > .row:last-child .row { gap: 0 !important; margin: 0 !important; border-top: 1px solid rgba(23,102,122,.14); border-bottom: 1px solid rgba(23,102,122,.14); }
+.pricing-inperson > .row:last-child .row > div { padding: 0; }
+.pricing-inperson > .row:last-child .row > div + div { border-left: 1px solid rgba(23,102,122,.14); }
+.pricing-inperson > .row:last-child .row > div > div { padding: 1.5rem 1rem !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; }
+.pricing-inperson > .row:last-child .row .h2 { font-size: clamp(1.55rem, 2.3vw, 2.15rem); }
+
+.pricing-online { margin: 1.25rem 0 2rem !important; }
+.pricing-online > .text-center { display: none; }
+.pricing-online .card { background: var(--deep-blue) !important; border: 0 !important; color: white; }
+.pricing-online .card::before { content: "ONLINE OPTION"; display: block; padding: .6rem 2rem; background: #6dc0cd; color: var(--deep-blue); font-size: .65rem; font-weight: 700; letter-spacing: .15em; }
+.pricing-online .card h5, .pricing-online .card .h2 { color: white !important; }
+.pricing-online .card p { color: rgba(255,255,255,.72) !important; }
+.pricing-online .card .fa-video { color: #6dc0cd !important; }
+.pricing-online .card-body > div[style*="border-bottom"] { border-color: rgba(255,255,255,.18) !important; }
+
+@media (max-width: 767.98px) {
+  #profile .profile-image-container,
+  #profile .profile-photo { min-height: 370px; max-height: 420px; }
+  .pricing-inperson { grid-template-columns: 1fr; }
+  .pricing-inperson > h3,
+  .pricing-inperson > .row:last-child { grid-column: auto; }
+  #pricing .card-body { padding: 1.5rem !important; }
+  .pricing-inperson > .row:last-child .row { border-bottom: 0; }
+  .pricing-inperson > .row:last-child .row > div { border-bottom: 1px solid rgba(23,102,122,.14); }
+  .pricing-inperson > .row:last-child .row > div + div { border-left: 0; }
+  .pricing-online .card .d-flex { align-items: flex-start !important; text-align: left; }
+}
