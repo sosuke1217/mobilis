@@ -1485,6 +1485,9 @@ section.bg-white + section.bg-light {
 /* Audience fit */
 .fit-section { padding: clamp(4.5rem, 7vw, 6.5rem) 0; background: #ffffff; }
 .fit-section h2, .flow-section h2 { color: var(--deep-blue); font-size: clamp(2.15rem, 4vw, 3.6rem); line-height: 1.35; letter-spacing: -.04em; }
+.fit-title { font-size: clamp(2rem, 3.5vw, 3.25rem) !important; }
+.fit-title span { display: block; white-space: nowrap; }
+.fit-section .col-lg-7 { padding-left: clamp(2rem, 4vw, 4rem); }
 .fit-section .col-lg-5 > p:last-child { max-width: 480px; line-height: 1.9; }
 .fit-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(23,102,122,.18); }
 .fit-list li { display: grid; grid-template-columns: 48px 1fr; gap: 1rem; align-items: start; padding: 1.2rem 0; border-bottom: 1px solid rgba(23,102,122,.18); color: var(--text-dark); line-height: 1.75; }
@@ -1510,6 +1513,7 @@ section.bg-white + section.bg-light {
   body { padding-bottom: 66px; }
   .fit-section, .flow-section { padding: 4rem 0; }
   .fit-section .col-lg-7 { margin-top: .5rem; }
+  .fit-section .col-lg-7 { padding-left: calc(var(--bs-gutter-x) * .5); }
   .fit-list li { grid-template-columns: 38px 1fr; padding: 1rem 0; font-size: .92rem; }
   .flow-heading { margin-bottom: 2.5rem; }
   .flow-grid { grid-template-columns: 1fr; border-bottom: 0; }
