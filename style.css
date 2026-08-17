@@ -1077,3 +1077,121 @@ section.bg-white + section.bg-light {
 .modal-footer.bg-light {
   background-color: #E4E9F2 !important;
 }
+
+/* Clear, intentional heading accents */
+.container h2::after {
+  width: 120px;
+  height: 2px;
+  bottom: -16px;
+  background: linear-gradient(90deg, var(--main-blue) 0 72%, rgba(23, 102, 122, .18) 72% 100%);
+}
+
+/* Editorial trainer profile */
+#profile {
+  background: var(--warm-white) !important;
+  padding-top: clamp(5rem, 9vw, 8rem) !important;
+  padding-bottom: clamp(5rem, 9vw, 8rem) !important;
+}
+
+#profile::before { display: none; }
+
+#profile .profile-image-container {
+  height: 100%;
+  min-height: 640px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 2px 72px 2px 2px;
+  background: var(--deep-blue);
+}
+
+#profile .profile-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
+  object-position: 42% center;
+  filter: saturate(.82) contrast(.98);
+  transition: transform .6s ease;
+}
+
+#profile .profile-photo:hover { transform: scale(1.015); box-shadow: none; }
+
+.profile-image-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 1.6rem;
+  color: rgba(255,255,255,.76);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  background: linear-gradient(180deg, transparent, rgba(8,31,39,.9));
+}
+
+.profile-image-caption span { color: white; font-weight: 700; letter-spacing: .14em; }
+
+#profile .profile-content { padding: .75rem 0 .75rem clamp(0rem, 2vw, 2rem); }
+
+#profile .profile-title {
+  max-width: 660px;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  line-height: 1.3;
+  letter-spacing: -.045em;
+}
+
+#profile .profile-title::after { left: 0 !important; width: 120px; }
+
+.profile-name-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(23,102,122,.2);
+}
+
+.profile-name, .profile-role { display: block; }
+.profile-name { color: var(--deep-blue); font-size: 1.35rem; font-weight: 700; }
+.profile-role { margin-top: .25rem; color: var(--muted); font-size: .76rem; letter-spacing: .06em; }
+.profile-language { flex: 0 0 auto; border: 1px solid rgba(23,102,122,.25); border-radius: 999px; padding: .45rem .8rem; color: var(--main-blue); font-size: .72rem; }
+
+.profile-intro { margin: 1.7rem 0; color: var(--text-dark); font-size: 1.08rem; line-height: 1.9; }
+
+.profile-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+  border-top: 1px solid rgba(23,102,122,.16);
+  border-bottom: 1px solid rgba(23,102,122,.16);
+}
+.profile-facts div { padding: 1.25rem; border-left: 1px solid rgba(23,102,122,.16); }
+.profile-facts div:first-child { border-left: 0; }
+.profile-facts strong, .profile-facts span { display: block; }
+.profile-facts strong { color: var(--main-blue); font-family: Georgia, serif; font-size: 2rem; font-weight: 400; line-height: 1; }
+.profile-facts span { margin-top: .5rem; color: var(--muted); font-size: .68rem; letter-spacing: .04em; }
+
+.profile-story { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.profile-story p { margin: 0; font-size: .91rem; line-height: 1.85; }
+#profile blockquote { margin: 2rem 0 0; padding: 1rem 0 1rem 1.3rem; border-left: 3px solid #6dc0cd; color: var(--deep-blue); font-family: Georgia, 'Noto Sans JP', serif; font-size: 1.1rem; }
+
+@media (max-width: 767.98px) {
+  .container h2::after, #profile .profile-title::after { width: 76px; }
+  #profile .profile-image-container, #profile .profile-photo { min-height: 460px; }
+  #profile .profile-image-container { border-radius: 2px 48px 2px 2px; }
+  #profile .profile-content { padding: 1rem 0 0; }
+  .profile-name-row { align-items: flex-start; flex-direction: column; }
+  .profile-facts div { padding: 1rem .65rem; }
+  .profile-facts strong { font-size: 1.6rem; }
+  .profile-facts span { font-size: .6rem; }
+  .profile-story { grid-template-columns: 1fr; gap: 1rem; }
+  .profile-image-caption { font-size: .62rem; }
+}
