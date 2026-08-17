@@ -1228,3 +1228,21 @@ section.bg-white + section.bg-light {
   .mobile-booking-bar a:first-child { background: var(--main-blue); }
   .mobile-booking-bar a:last-child { background: #1f8f57; }
 }
+
+
+/* Keep selected English headings on exactly two intentional lines */
+.forced-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .profile-title {
+    font-size: clamp(1.45rem, 7vw, 1.7rem) !important;
+  }
+
+  .pricing-intro h3 {
+    font-size: clamp(1.3rem, 6.2vw, 1.55rem) !important;
+    letter-spacing: -0.02em !important;
+  }
+}
