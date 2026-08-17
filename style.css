@@ -1395,3 +1395,89 @@ section.bg-white + section.bg-light {
   #testimonials .testimonial-card .card-body { padding: 3rem 1.4rem 2rem !important; }
   #testimonials .testimonial-card .card-text { font-size: .94rem; line-height: 1.85; }
 }
+
+/* Whole-page rhythm and component consistency */
+.navbar { min-height: 68px; }
+.navbar-brand img { width: 132px; height: auto; max-height: 52px !important; object-fit: contain; }
+.hero-section { min-height: calc(100svh - 68px) !important; }
+.concept-section, #about, #profile, #pricing, #testimonials { padding-top: clamp(4.5rem, 7vw, 6.5rem) !important; padding-bottom: clamp(4.5rem, 7vw, 6.5rem) !important; }
+.concept-mark { width: min(300px, 68vw); }
+.container h2::after { display: none; }
+.section-kicker { margin-bottom: 1rem; }
+.section-intro { max-width: 700px; }
+
+/* Smaller portrait with a useful continuation below it */
+#profile .row { align-items: center !important; }
+#profile .profile-image-container {
+  width: min(100%, 300px);
+  min-height: 350px;
+  max-height: 380px;
+  border-radius: 2px 44px 2px 2px;
+}
+#profile .profile-photo { min-height: 350px; max-height: 380px; }
+.profile-side-note {
+  width: min(100%, 300px);
+  margin: .85rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid rgba(23,102,122,.16);
+  background: rgba(23,102,122,.16);
+}
+.profile-side-note span {
+  padding: .72rem .55rem;
+  background: var(--warm-white);
+  color: var(--main-blue);
+  font-size: .59rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-align: center;
+}
+.profile-side-note span:last-child { grid-column: 1 / -1; }
+#profile .profile-title { margin-bottom: 2.2rem; }
+#profile .profile-title::after { display: none; }
+.profile-intro { margin: 1.35rem 0; }
+.profile-facts { margin: 1.45rem 0; }
+.profile-facts div { padding: 1rem; }
+.profile-story { gap: 1.15rem; }
+#profile blockquote { margin-top: 1.4rem; }
+
+/* Consistent visual language */
+#about .row > .col-md-4,
+.pricing-intro,
+#testimonials .testimonial-card { border-radius: 3px 26px 3px 3px !important; }
+#about .row > .col-md-4:hover,
+#pricing .card:hover,
+#testimonials .testimonial-card:hover { transform: translateY(-2px); }
+#pricing .card { border-radius: 3px 22px 3px 3px !important; }
+#pricing .pricing-inperson > .row:last-child .card { border-radius: 3px 28px 3px 3px !important; }
+
+/* Compact supplemental information beneath pricing */
+#pricing > .container > p,
+#pricing > .container > .mt-5 { max-width: 860px; margin-left: auto; margin-right: auto; }
+#pricing > .container > .mt-5 { margin-top: 2rem !important; padding-top: 1.5rem; border-top: 1px solid rgba(23,102,122,.14); }
+
+/* Reduce visual noise lower on the page */
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next { box-shadow: none; border: 1px solid rgba(23,102,122,.18); }
+#faq-ja, #faq-en { background: #eef3f2; }
+.faq-item { border: 1px solid rgba(23,102,122,.12); box-shadow: none; border-radius: 3px 18px 3px 3px; }
+#contact { background: var(--warm-white) !important; }
+
+@media (max-width: 767.98px) {
+  .navbar { min-height: 60px; }
+  .navbar-brand img { width: 112px; max-height: 46px !important; }
+  .hero-section { min-height: calc(100svh - 60px) !important; }
+  .concept-section, #about, #profile, #pricing, #testimonials { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+  #profile .profile-image-container { width: min(78%, 250px); min-height: 290px; max-height: 315px; }
+  #profile .profile-photo { min-height: 290px; max-height: 315px; }
+  .profile-side-note { width: min(78%, 250px); }
+  #profile .profile-content { padding-top: 2rem; }
+  .profile-facts { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .profile-facts div { padding: .85rem .4rem; }
+  .profile-facts span { word-break: break-word; }
+  #about .row > .col-md-4,
+  .pricing-intro,
+  #pricing .card,
+  #testimonials .testimonial-card { border-radius: 3px 20px 3px 3px !important; }
+}
