@@ -28,7 +28,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="image" href="IMG_4351.JPG">
+  <link rel="preload" as="image" href="IMG_4351.webp" type="image/webp">
   <link rel="preload" as="image" href="logo-light.png" fetchpriority="high">
 
   <!-- Bootstrap CDN -->
@@ -99,7 +99,7 @@
   <!-- Heroセクション -->
   <main id="main-content">
   <section class="hero-section text-white d-flex align-items-center" style="
-  background-image: url('IMG_4351.JPG');
+  background-image: url('IMG_4351.webp');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -336,7 +336,7 @@
       <div class="row align-items-stretch g-5">
         <div class="col-lg-4">
           <div class="profile-image-container" data-aos="fade-right" data-aos-delay="100">
-            <img src="profile.JPEG" alt="吉田壮祐 - ストレッチトレーナー"
+            <img src="profile.webp" alt="吉田壮祐 - ストレッチトレーナー"
             class="profile-photo" width="600" height="600" loading="lazy" decoding="async">
             <div class="profile-image-caption"><span>SOSUKE YOSHIDA</span>Movement Specialist</div>
           </div>
@@ -371,7 +371,7 @@
       <div class="row align-items-stretch g-5">
         <div class="col-lg-4">
           <div class="profile-image-container" data-aos="fade-right" data-aos-delay="100">
-            <img src="profile.JPEG" alt="Sosuke Yoshida - Stretch Trainer"
+            <img src="profile.webp" alt="Sosuke Yoshida - Stretch Trainer"
               class="profile-photo" width="600" height="600" loading="lazy" decoding="async">
             <div class="profile-image-caption"><span>SOSUKE YOSHIDA</span>Movement Specialist</div>
           </div>
@@ -1624,18 +1624,48 @@
   
   <!-- 言語切替用 JavaScript -->
   <script>
-    function switchLang(lang) {
+    function switchLang(lang, track = true) {
       document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('d-none', lang !== 'ja'));
       document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('d-none', lang !== 'en'));
       document.documentElement.lang = lang;
       localStorage.setItem('mobilis_lang', lang);
+      if (track && typeof gtag === 'function') {
+        gtag('event', 'language_switch', { language: lang });
+      }
     }
     window.addEventListener("DOMContentLoaded", function () {
       const urlParams = new URLSearchParams(window.location.search);
       const urlLang = urlParams.get("lang");
       const saved = localStorage.getItem('mobilis_lang');
       const lang = urlLang || saved || 'ja';
-      switchLang(lang);
+      switchLang(lang, false);
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('#contact form').forEach(function (form) {
+        form.addEventListener('submit', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              method: 'contact_form',
+              language: document.documentElement.lang
+            });
+          }
+        });
+      });
+
+      const pricing = document.getElementById('pricing');
+      if (pricing && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          if (entries.some(entry => entry.isIntersecting)) {
+            if (typeof gtag === 'function') {
+              gtag('event', 'view_pricing', { language: document.documentElement.lang });
+            }
+            observer.disconnect();
+          }
+        }, { threshold: 0.35 });
+        observer.observe(pricing);
+      }
     });
   </script>
   <script>
