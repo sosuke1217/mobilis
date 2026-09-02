@@ -127,10 +127,15 @@
           </div>
           <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
-              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで予約"
+              <a href="https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new" class="btn btn-primary btn-cta btn-lg" aria-label="空き状況を確認して予約"
+                 target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'booking_click', { 'event_category': 'CTA', 'event_label': 'Online Booking(JP/Hero)' });">
+                <i class="fa-solid fa-calendar-check me-2"></i> 空き状況を確認・予約
+              </a>
+              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="LINEで相談"
                  target="_blank" rel="noopener noreferrer"
                  onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'LINE予約(JP)' });">
-                <i class="fa-brands fa-line me-2"></i> LINEで予約
+                <i class="fa-brands fa-line me-2"></i> LINEで相談
               </a>
               <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="WhatsAppで相談"
                  target="_blank" rel="noopener noreferrer"
@@ -158,10 +163,15 @@
           </div>
           <div class="hero-cta" data-aos="zoom-in" data-aos-delay="400">
             <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
-              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="Book on LINE"
+              <a href="https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new" class="btn btn-primary btn-cta btn-lg" aria-label="Check availability and book"
+                 target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'booking_click', { 'event_category': 'CTA', 'event_label': 'Online Booking(EN/Hero)' });">
+                <i class="fa-solid fa-calendar-check me-2"></i> Check Availability & Book
+              </a>
+              <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta btn-lg" aria-label="Contact on LINE"
            target="_blank" rel="noopener noreferrer"
            onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Book on LINE' });">
-           <i class="fa-brands fa-line me-2"></i> Book on LINE
+           <i class="fa-brands fa-line me-2"></i> Contact on LINE
         </a>
               <a href="https://wa.me/818096921177" class="btn btn-whatsapp btn-cta btn-lg" aria-label="Consult on WhatsApp"
            target="_blank" rel="noopener noreferrer"
@@ -944,9 +954,18 @@
     <div class="lang-ja text-center">
       <h2 class="mb-4 fw-bold">予約・相談</h2>
       <p class="mb-4 text-muted">
-        ご予約やご相談は、LINE・WhatsApp、または下記フォームからお気軽にご連絡ください。<br>
-        ご希望の日時・場所・内容をお知らせいただけるとスムーズです。
+        空き状況を確認して、そのままオンラインで仮予約できます。<br>
+        日時や場所について相談したい場合は、LINE・WhatsApp・フォームをご利用ください。
       </p>
+      <div class="mb-4" data-aos="zoom-in">
+        <a href="https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new" class="btn btn-primary btn-cta btn-lg px-5" aria-label="空き状況を確認して予約"
+           target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event', 'booking_click', { 'event_category': 'CTA', 'event_label': 'Online Booking(JP/Contact)' });">
+          <i class="fa-solid fa-calendar-check me-2"></i> 空き状況を確認・予約
+        </a>
+        <div class="small text-muted mt-2">24時間受付・予約直後は仮予約です</div>
+      </div>
+      <p class="small text-muted mb-2">日時や場所のご相談はこちら</p>
       <div class="d-flex justify-content-center gap-3 mt-4 mb-3 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
         <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="LINEで予約"
            target="_blank" rel="noopener noreferrer"
@@ -994,9 +1013,18 @@
     <div class="lang-en text-center d-none">
       <h2 class="mb-4 fw-bold">Book / Contact</h2>
       <p class="mb-4 text-muted">
-        For booking or inquiries, feel free to contact me via LINE, WhatsApp, or the form below.<br>
-        Let me know your preferred time, location, and any questions you have.
+        Check live availability and submit a tentative booking online.<br>
+        For questions about timing or location, use LINE, WhatsApp, or the form below.
       </p>
+      <div class="mb-4" data-aos="zoom-in">
+        <a href="https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new" class="btn btn-primary btn-cta btn-lg px-5" aria-label="Check availability and book"
+           target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event', 'booking_click', { 'event_category': 'CTA', 'event_label': 'Online Booking(EN/Contact)' });">
+          <i class="fa-solid fa-calendar-check me-2"></i> Check Availability & Book
+        </a>
+        <div class="small text-muted mt-2">Available 24/7 · Your request is tentative until confirmed</div>
+      </div>
+      <p class="small text-muted mb-2">Need help choosing a time or location?</p>
       <div class="d-flex justify-content-center gap-3 mt-4 mb-3 flex-wrap" data-aos="zoom-in" data-aos-delay="400">
         <a href="https://lin.ee/c9cW6QW" class="btn btn-line btn-cta" aria-label="Book on LINE"
            target="_blank" rel="noopener noreferrer"
@@ -1251,7 +1279,7 @@
 
           <h6 class="fw-bold mt-3">第2条（予約およびキャンセル）</h6>
           <ol>
-            <li>完全予約制です。LINE・WhatsApp・お問い合わせフォームにて受け付けます。</li>
+            <li>完全予約制です。オンライン予約画面、LINE、WhatsApp、お問い合わせフォームにて受け付けます。</li>
             <li>キャンセルは24時間前までにご連絡ください。それ以降は1回分消化扱いとなります。</li>
             <li>その他の変更・キャンセルは個別にご相談ください。</li>
           </ol>
@@ -1293,7 +1321,7 @@
 
           <h6 class="fw-bold mt-3">Article 2 (Reservations and Cancellations)</h6>
           <ol>
-            <li>All sessions require prior booking via LINE, WhatsApp, or the inquiry form.</li>
+            <li>All sessions require prior booking through the online booking page, LINE, WhatsApp, or the inquiry form.</li>
             <li>Please cancel at least 24 hours in advance. Cancellations within 24 hours will be counted as one session used.</li>
             <li>Other changes will be handled upon consultation.</li>
           </ol>
@@ -1357,13 +1385,12 @@
   </div>
 </section>
   <div class="mobile-booking-bar" aria-label="クイック予約">
-    <a href="https://lin.ee/c9cW6QW" target="_blank" rel="noopener noreferrer"
-       onclick="gtag('event', 'line_click', { 'event_category': 'CTA', 'event_label': 'Mobile Sticky LINE' });">
-      <i class="fa-brands fa-line"></i><span class="lang-ja">LINEで予約</span><span class="lang-en d-none">Book on LINE</span>
+    <a href="https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'booking_click', { 'event_category': 'CTA', 'event_label': 'Mobile Sticky Booking' });">
+      <i class="fa-solid fa-calendar-check"></i><span class="lang-ja">空き状況・予約</span><span class="lang-en d-none">Book Online</span>
     </a>
-    <a href="https://wa.me/818096921177" target="_blank" rel="noopener noreferrer"
-       onclick="gtag('event', 'whatsapp_click', { 'event_category': 'CTA', 'event_label': 'Mobile Sticky WhatsApp' });">
-      <i class="fa-brands fa-whatsapp"></i><span class="lang-ja">相談する</span><span class="lang-en d-none">WhatsApp</span>
+    <a href="#contact">
+      <i class="fa-regular fa-comments"></i><span class="lang-ja">相談する</span><span class="lang-en d-none">Ask a Question</span>
     </a>
   </div>
 </main>
@@ -1471,6 +1498,7 @@
     "potentialAction": {
       "@type": "ReserveAction",
       "target": [
+        "https://mobilis-8008d58dd542.herokuapp.com/public/bookings/new",
         "https://lin.ee/c9cW6QW",
         "https://wa.me/818096921177"
       ],
@@ -1516,7 +1544,7 @@
       "name":"予約は必要ですか？",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"完全予約制です。LINEまたはウェブフォームからご予約ください。"
+        "text":"完全予約制です。オンライン予約画面で空き状況を確認して仮予約できます。日時や場所の相談はLINE、WhatsApp、ウェブフォームでも受け付けています。"
       }
     },
     {
